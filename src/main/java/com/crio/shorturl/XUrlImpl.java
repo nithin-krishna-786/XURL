@@ -1,5 +1,4 @@
 package com.crio.shorturl;
-
 import java.util.HashMap;
 
 public class XUrlImpl implements XUrl
@@ -15,9 +14,8 @@ public class XUrlImpl implements XUrl
         if(long_to_short.containsKey(longUrl))
         return long_to_short.get(longUrl);
 
-        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ "0123456789"
-        + "abcdefghijklmnopqrstuvxyz";
-									
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ "0123456789"+ "abcdefghijklmnopqrstuvxyz";
+        
 		StringBuilder sb = new StringBuilder(9);
 
         for (int i = 0; i < 9; i++) 
@@ -43,7 +41,7 @@ public class XUrlImpl implements XUrl
         String temp;
         temp = shortUrl;
 
-        if(!short_to_long.containsKey(temp))
+        if(!short_to_long.containsKey(temp)	)
         return null;
 
         String ans;
@@ -72,7 +70,6 @@ public class XUrlImpl implements XUrl
         return null ;
     }
 
-
     public String registerNewUrl(String longUrl, String shortUrl)
     {
         if(short_to_long.containsKey(shortUrl))
@@ -90,6 +87,5 @@ public class XUrlImpl implements XUrl
 
         return hit_count.get(longUrl);
     }
-    
    
 }

@@ -14,6 +14,7 @@ public class XUrlMain {
     String url2 = xUrl.registerNewUrl("http://abc2.com");
     String url3 = xUrl.registerNewUrl("http://abc3.com");
     String url4 = xUrl.registerNewUrl("http://abc2.com");  // url4 should be the same as url2
+    
     System.out.println(url);
     System.out.println(url1);
     System.out.println(url2);
